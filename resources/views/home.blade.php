@@ -37,7 +37,7 @@
                     <input
                         type="search"
                         class="h-12 w-full appearance-none rounded-full px-4 placeholder:font-semibold placeholder:text-black-30"
-                        placeholder="Cari Makanan"
+                        placeholder="Cari Makanan atau Minuman..."
                         wire:model.live.debounce.300ms="term"
                     />
                     @if (! $term)
@@ -132,7 +132,7 @@
                         wire:navigate
                         class="block font-semibold text-primary-50"
                     >
-                        See More
+                        Lihat Semua
                     </a>
                 </div>
                 <div

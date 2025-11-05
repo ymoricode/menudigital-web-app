@@ -50,22 +50,9 @@
 
         <div class="space-y-3 rounded-xl border-2 p-5">
             <div class="flex items-center justify-between">
-                <span class="font-medium text-black-50">Sub total</span>
-                <span class="font-medium text-black-100">
-                    Rp{{ number_format($subtotal, 0, ",", ".") }}
-                </span>
-            </div>
-            <div class="flex items-center justify-between">
-                <span class="font-medium text-black-50">PPN (11%)</span>
-                <span class="font-medium text-black-100">
-                    Rp{{ number_format($tax, 0, ",", ".") }}
-                </span>
-            </div>
-            <hr class="border-2 border-dashed" />
-            <div class="flex items-center justify-between">
                 <span class="text-lg font-semibold text-black-50">Total</span>
                 <span class="text-lg font-semibold text-black-100">
-                    Rp{{ number_format($total, 0, ",", ".") }}
+                    Rp{{ number_format($subtotal, 0, ",", ".") }}
                 </span>
             </div>
         </div>
