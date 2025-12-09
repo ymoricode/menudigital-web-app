@@ -1,0 +1,25 @@
+services:
+  # The Web Service (Laravel App)
+  - type: web
+    name: digital-menu-app
+    runtime: docker
+    plan: free
+    region: singapore # Closest to user
+    envVars:
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DATABASE_URL
+        fromDatabase:
+          name: digital-menu-db
+          property: connectionString
+    # Render sets the PORT env var automatically, Dockerfile/Entrypoint must respect it.
+
+databases:
+  # The Postgres Database
+  - name: digital-menu-db
+    plan: free # Expires in 90 days
+    region: singapore
